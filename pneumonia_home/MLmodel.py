@@ -17,7 +17,7 @@ def model_call(data):
     inparr.shape
 
     # Load TFLite model and allocate tensors.
-    interpreter = tf.lite.Interpreter(model_path="./trained_model.tflite")
+    interpreter = tf.lite.Interpreter(model_path="trained_model.tflite")
     interpreter.allocate_tensors()
 
     input_details = interpreter.get_input_details()
