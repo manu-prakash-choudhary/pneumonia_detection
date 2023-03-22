@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,60 +6,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/main.css">
-    <script src="../static/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="{% static 'main.js' %}"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"> </script>
     <title>Pneumonia</title>
-    <!-- <link rel="stylesheet" href="dropzone.min.css"> -->
+
+    <!-- admin mart links -->
+    <link href="{% static 'adminmart-master/dist/css/style.min.css' %}" rel="stylesheet">
+    <script src="{% static 'adminmart-master/assets/libs/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <!-- <script src="{% static 'adminmart-master/assets/libs/popper.js/dist/umd/popper.min.js' %}"></script> -->
+    <script src="{% static 'adminmart-master/assets/libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- apps -->
+    <!-- apps -->
+    <script src="{% static 'adminmart-master/dist/js/app-style-switcher.js' %}"></script>
+    <script src="{% static 'adminmart-master/dist/js/feather.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'adminmart-master/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js' %}"></script>
+    <script src="{% static 'adminmart-master/assets/extra-libs/sparkline/sparkline.js' %}"></script>
+    <!--Wave Effects -->
+    <!-- themejs -->
+    <!--Menu sidebar -->
+    <script src="{% static 'adminmart-master/dist/js/sidebarmenu.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'adminmart-master/dist/js/custom.min.js' %}"></script>
 </head>
-<body class="container-fluid" data-bs-theme="dark" >
+
+<body class="container-fluid" >
+    <div id="logo">
+        <img src="../static/MediDoor.jpg" alt="MediDoor Logo">
+    </div>
     <div class=" d-flex align-items-center" >
         <div class="center">
                 
             <h1> Pneumonia/Covid-19 Detection using CNN</h1>
             <br><br>
-            <div class="card">
+            <div class="card2">
                 <div class = "about_pneumonia">        
-                    <h3>About Pneumonia!</h3> <br>
-                    <p style="font-style: italic;"> Pneumonia is an inflammatory condition of the lung affecting primarily the small air sacs known as alveoli.Symptoms typically include some combination of productive or dry cough, chest pain, fever and difficulty breathing. The severity of the condition is variable. Pneumonia is usually caused by infection with viruses or bacteria and less commonly by other microorganisms, certain medications or conditions such as autoimmune diseases.Risk factors include cystic fibrosis, chronic obstructive pulmonary disease (COPD), asthma, diabetes, heart failure, a history of smoking, a poor ability to cough such as following a stroke and a weak immune system. Diagnosis is often based on symptoms and physical examination. Chest X-ray, blood tests, and culture of the sputum may help confirm the diagnosis.The disease may be classified by where it was acquired, such as community- or hospital-acquired or healthcare-associated pneumonia.</p>
+                    <h3>General Description of Pneumonia!</h3> <br>
+                    <p style="font-style: italic;"> Pneumonia is an inflammatory condition of the lung affecting primarily the 
+                        small air sacs known as alveoli.Symptoms typically include some combination of productive or dry cough,
+                        chest pain, fever and difficulty breathing. The severity of the condition is variable. Pneumonia is 
+                        usually caused by infection with viruses or bacteria and less commonly by other microorganisms, certain
+                        medications or conditions such as autoimmune diseases.Risk factors include cystic fibrosis, chronic
+                        obstructive pulmonary disease (COPD), asthma, diabetes, heart failure, a history of smoking, a poor 
+                        ability to cough such as following a stroke and a weak immune system. Diagnosis is often based on 
+                        symptoms and physical examination. Chest X-ray, blood tests, and culture of the sputum may help confirm
+                         the diagnosis.The disease may be classified by where it was acquired, such as community- or 
+                         hospital-acquired or healthcare-associated pneumonia.</p>
                 </div>
             </div>
             <br><br>
-            <div class="card">
-                <h3>Description of the Pneumonia Dataset</h3><br>
 
-                <p>There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
+            <div class="card2">
+                <div class="about_pneumonia">
+                    <h3>General Description of Covid-19!</h3> <br>
+                    <p style="font-style: italic;"> COVID-19 is a contagious respiratory illness caused by the SARS-CoV-2 virus. The virus first emerged in Wuhan, China in
+                    late 2019 and quickly spread to become a global pandemic.
+                    
+                    The most common symptoms of COVID-19 include fever, cough, and difficulty breathing, although some people may experience
+                    only mild or no symptoms at all. The virus is primarily spread through respiratory droplets when an infected person
+                    talks, coughs, or sneezes. It can also be spread by touching a surface contaminated with the virus and then touching the
+                    face.
+                    
+                    The severity of COVID-19 can vary widely, with some people experiencing only mild symptoms while others may become
+                    seriously ill and require hospitalization. The virus is particularly dangerous for older adults and people with
+                    underlying health conditions.
+                    
+                    Preventing the spread of COVID-19 involves following basic hygiene practices like washing hands frequently, wearing
+                    masks, and practicing physical distancing. Vaccines have also been developed and authorized for emergency use to help
+                    prevent severe illness and death from COVID-19.</p>
+                </div>
+            </div>
+            <br><br>
+
+
+            <div class="card2">
+                <h3>Description of the Dataset</h3><br>
+
+                <p>There are 5,863 X-Ray images (JPEG) and 3 categories (Pneumonia/COVID/Normal).
                     Chest X-ray images (anterior-posterior) were selected from retrospective(previous) cohorts(common characterstics) of pediatric patients of one to five years old from Guangzhou Women and Children’s Medical Center, Guangzhou. All chest X-ray imaging was performed as part of patients’ routine clinical care.
                     For the analysis of chest x-ray images, all chest radiographs were initially screened for quality control by removing all low quality or unreadable scans. The diagnoses for the images were then graded by two expert physicians before being cleared for training the AI system. In order to account for any grading errors, the evaluation set was also checked by a third expert
                 </p>
             </div>
-
+            <br><br>
 
             <div class = "bg-img"></div>
             <div class="simple-card">
-                    <h3>Distribution of the dataset </h3> <br>
-                    <div class="img-container">
-                        <img src="../static/output.png" alt="Distribution of dataset" class="">
+                    <h3>Distribution of the dataset </h3>
+                    <div class="my-img-container">
+                        <img src="{% static 'Pneumonia_vs_normal.jpeg'%}" alt="Distribution of Pneumonia dataset" class=""> &nbsp &nbsp
+                        <img src="../static/Covid_vs_Normal dataset.jpeg" alt="Distribution of Covid-19 dataset">
                     </div>
                     <br>
                     <p>Since data here was imbalanced so to cover for that we have increased the number of training examples using data augmentation</p>
 
                     <br> <br>
-                    <h3>Preview of the images of both Classes</h3>
+                    <h3>Preview of the images of all 3 Classes</h3>
                     <br>
-                    <div class="img-container">
+                    <div class="my-img-container">
                         <div class="">
                             <img src="../static/normal.png" alt="Normal Sample Class">
                             <img src="../static/pneumoniaI.png" alt="Pneumonia Class">
+                            <br><br>
+                            Covid <br>
+                            <img src="../static/COVID.jpg" alt="Covid Class">
                         </div>
                     </div>
                     
@@ -66,14 +127,20 @@
 
             {% if result %}
             <br><br>
-            <div class="card">
+            <div class="card2">
                 <h3>Result of the given x-ray is {{result}} </h3>
                 <br>
+                <div class="my-img-container">
+                    <img src="{{image_url}}" alt="Result of the given x-ray" class="result_img">
+                </div>
+                
+                <br>
+                <div class="precautions"></div>
             </div>
             
             {% endif %}
             
-            <div class="card">
+            <div class="card2">
                 {% if result %}
                 <h3>Check Another X-ray</h3>
                 {% else %}
@@ -84,25 +151,33 @@
                     {% csrf_token %}
                     <!-- <input type="file" ,name="files_", id ="file"  > -->
                     <div class="input-container">
-                        <input required type='file' class="form-control" style="width: auto;"  name="images" id="photo" multiple />
+                        <input required type='file' class="form-control" style="width: auto;"  name="images" id="photo" multiple/>
                     </div>
                     <br>
-                    <button type = "submit"  class="btn btn-primary" name ="upload" id="submit_img">Submit </button>
+                    <button type = "submit"  class="btn btn-primary" name ="upload" id="submit_img" style="text-align: center;">Submit </button>
                 </form>
             </div>
 
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
             
-            
+           
         </div>
     </div>
 </body>
 
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
 
 <script>
     $(window).scroll(function () {
-            $('.img-container').each(function () {
+            $('.my-img-container').each(function () {
                 var position = $(this).offset().top;
                 // set display block
                 $(this).show();
@@ -113,5 +188,132 @@
                 }
             });
         });
+
+    // using document ready function 
+    $(document).ready(function () {
+        // using scroll event 
+        
+        {% if result %}
+        $('#myModal').html(`<div class="card2">
+                <h3>Result of the given x-ray is {{result}} </h3>
+                <br>
+                <div class="my-img-container">
+                    <img src="{{image_url}}" alt="Result of the given x-ray" class="result_img">
+                </div>
+                <br>
+                <div class="precautions">
+                </div>
+                
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>`)
+        
+            {% if result == "Pneumonia Positive" %}
+            $('.precautions').html(`
+                <b>Here are some precautions that you can take to help manage the Pneumonia:</b>
+                        <ol class="pb-5">
+                            <li>
+                                Rest and avoid physical exertion: Pneumonia can cause fatigue and weakness, so it's important to rest and avoid
+                                physical
+                                activity that may exacerbate your symptoms.
+                            </li>
+                        
+                            <li>
+                                Take prescribed medications: Your healthcare provider may prescribe antibiotics, antivirals or other medications
+                                to help
+                                manage the infection. Be sure to take them as prescribed, and complete the full course of treatment even if you
+                                start
+                                feeling better.
+                            </li>
+                        
+                            <li>
+                                Practice good hygiene: Good hygiene is essential to prevent the spread of pneumonia. Cover your mouth and nose
+                                when
+                                coughing or sneezing, wash your hands frequently, and avoid sharing personal items such as towels, utensils, or
+                                glasses.
+                            </li>
+                        
+                            <li>
+                                Avoid smoking: Smoking can damage your lungs and make you more susceptible to pneumonia, so it's important to
+                                avoid
+                                smoking or exposure to secondhand smoke.
+                            </li>
+                        
+                            <li>
+                                Stay hydrated: Drink plenty of fluids such as water, tea, and soup to help keep your body hydrated and assist
+                                with the
+                                healing process.
+                            </li>
+                        
+                            <li>
+                                Follow up with your healthcare provider: Make sure to attend any follow-up appointments with your healthcare
+                                provider,
+                                and inform them of any changes or concerns you may have.
+                            </li>
+                        </ol>`)
+            {% elif result == "Covid Positive" %}
+            $('.precautions').html(`
+                <b>Here are some precautions that you can take to help manage the Covid:</b>
+
+                <ol>
+                    <li> 
+                        Get vaccinated: COVID-19 vaccines are highly effective at preventing severe illness, hospitalization, and death. Get vaccinated as soon as you are eligible and continue to follow other precautions even after getting vaccinated.
+                    </li>
+                    <li>
+                        Wear a mask: Wearing a mask, particularly in crowded indoor settings, can help prevent the spread of the virus. Choose a mask that fits snugly over your nose and mouth, and make sure to wear it properly.
+                    </li>
+                    <li>
+                       Practice social distancing: Maintain a distance of at least 6 feet from others, particularly those who are sick or unvaccinated.
+                    </li>
+                    <li>
+                        Wash your hands frequently: Wash your hands often with soap and water for at least 20 seconds, or use an alcohol-based hand sanitizer if soap and water are not available.
+                    </li>
+                    <li>
+                        Avoid large gatherings: Avoid large gatherings, particularly indoors, where the risk of transmission is higher.
+                    </li>
+                    <li>
+                        Stay home when sick: If you are feeling unwell, stay home and avoid contact with others until you have recovered.
+                    </li>
+                    <li>
+                        Follow public health guidelines: Follow local and national public health guidelines, such as quarantine and isolation requirements, to help prevent the spread of COVID-19.
+                    </li>
+                </ol>`)
+            {% else %}
+            $('.precautions').html(`Still Here are some general tips to follow to stay fit and boost your immune system:
+<ol>
+    <li>
+        Eat a balanced diet: Include a variety of foods in your diet, including fruits, vegetables, whole grains, lean proteins, and healthy fats. This will provide your body with the nutrients it needs to function properly and support your immune system.
+    </li>
+    <li>
+        Stay hydrated: Drink plenty of water and avoid sugary or caffeinated beverages, which can dehydrate you.
+    </li>
+    <li>
+        Exercise regularly: Exercise helps maintain a healthy weight, improves cardiovascular health, and reduces stress. Aim for at least 150 minutes of moderate-intensity exercise per week.
+    </li>
+    <li>
+        Get enough sleep: Aim for 7-9 hours of sleep per night to help your body repair and regenerate.
+    </li>
+    <li>
+        Manage stress: Chronic stress can weaken your immune system. Try relaxation techniques such as meditation, deep breathing, or yoga to manage stress.
+    </li>
+    <li>
+        Limit alcohol and tobacco: Both alcohol and tobacco can weaken your immune system and increase your risk of various health problems. Limit or avoid them altogether.
+    </li>
+    <li>
+        Practice good hygiene: Wash your hands frequently, cover your mouth and nose when coughing or sneezing, and avoid touching your face to prevent the spread of germs.
+    </li>
+    <li>
+        Stay up to date on vaccinations: Vaccinations help prevent illness and protect against serious complications from diseases.
+    </li>
+</ol>`)
+            {% endif %}
+
+        $('#myModal').modal('show');
+
+        {% endif %}
+
+        
+
+    });
+
 
 </script>

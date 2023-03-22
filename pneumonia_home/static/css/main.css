@@ -40,26 +40,27 @@ button{
     left : 0;
     z-index : -1;
     width: 100%;
-    height: 250%;
+    height: 100%;
     -webkit-filter: blur(2px);
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
     -ms-filter: blur(2px);
     filter: blur(2px);
+    overflow-y: scroll;
   }
 
-  .card{
-    background-color: rgb(171, 140, 140);
-    font-display: swap;
-    border-radius: 5px;
-    box-shadow: 12px;
-    margin: 10px;
-    padding: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-    transition: all 0.7s ;
+  .card2{
+    background-color: rgb(171, 140, 140) !important;
+    font-display: swap !important;
+    border-radius: 5px !important;
+    box-shadow: 12px !important;
+    margin: 10px !important;
+    padding: 1% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    transition: all 0.7s  !important;
   }
-.card:hover{
+.card2:hover{
   background: linear-gradient(to bottom, #008CBA, #4CAF50);
   transform: translateY(-15px);
   transform: scale(1.1);
@@ -83,13 +84,14 @@ button{
 }
 
 h1, h3{
-  font-size: 3rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  margin-bottom: 1rem;
-  text-decoration: underline;
-  transition: all 0.7s ;
+  font-size: 3rem !important;
+  font-weight: 500!important;
+  text-transform: uppercase!important;
+  letter-spacing: 0.1rem!important;
+  margin-bottom: 1rem!important;
+  margin-top: 19px!important;
+  text-decoration: underline!important;
+  transition: all 0.7s !important;
 }
 h1:hover{
   color: aqua;
@@ -97,6 +99,27 @@ h1:hover{
 
 }
 
+h3:hover {
+  color: aqua;
+  transform: scale(1.1);
+
+}
+.result-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.btn{
+  font-size: 20px !important;
+}
+.form-control{
+  font-size: 20px !important;
+  margin: auto !important;
+}
+/* .img-container {
+  margin: 50px !important;
+} */
 /* .fade-in {
   opacity: 0;
   transition: opacity 2s;
@@ -106,11 +129,6 @@ h1:hover{
   opacity: 1;
 } */
 
-.img-container {
-  position: relative;
-  overflow: hidden;
-  display: none;
-}
 
 .fade-in-left {
   position: relative;
@@ -151,4 +169,15 @@ h1:hover{
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.precautions{
+  margin: 0px !important;
+  text-align: left !important;
+}
+
+#logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
 }
