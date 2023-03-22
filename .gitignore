@@ -1,17 +1,13 @@
 
 ## 0.1.0
-./env/**
-./env
 env/**
-env
+env/
 
 
 **/env/
 
-./__pycache__/**
-./__pycache__
-__pycache__/**
-__pycache__
 
-
+__pycache__/**2
+__pycache__/
+pneumonia_detection/__pycache__
 **/__pycache__/
