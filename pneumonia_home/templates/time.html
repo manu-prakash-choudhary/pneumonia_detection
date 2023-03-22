@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Image Falling Animation</title>
+        <style>
+            #container {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                background-color: #ddd;
+            }
+
+            #image {
+                position: absolute;
+                top: -100px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <img id="image" src="../static/bear.jpg" alt="Falling Image">
+        </div>
+    </body>
+
+</html>
+
+<script>
+    const image = document.getElementById('image');
+        let positionY = -100;
+        const speed = 2;
+
+        function update() {
+            positionY += speed;
+            image.style.top = positionY + 'px';
+            if (positionY < document.documentElement.clientHeight) {
+                window.requestAnimationFrame(update);
+            }
+        }
+
+        window.requestAnimationFrame(update);
+
+</script>
